@@ -8,7 +8,7 @@ function App() {
   const [bots, setBots] = useState([]);
 
   useEffect(() => {
-    fetch(" http://localhost:3000/bots")
+    fetch("https://bot-api-5aah.onrender.com/bots")
       .then((res) => res.json())
       .then((data) => setBots(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -38,7 +38,7 @@ function App() {
   const dischargeBot = async (botId) => {
     try {
       // Perform API call to delete the bot from the backend
-      const response = await fetch(` http://localhost:3000/bots/${botId}`, {
+      const response = await fetch(` https://bot-api-5aah.onrender.com/bots/${botId}`, {
         method: "DELETE",
       });
 
