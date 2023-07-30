@@ -1,8 +1,8 @@
 import React from "react";
 
-function BotCard({ bot }) {
+function BotCard({ bot,addedArmy }) {
   return (
-    <div className="grid grid-cols-5 gap-4 p-4 bg-black rounded shadow-md">
+    <div className="grid grid-cols-5 gap-4 p-4 bg-white rounded shadow-md">
       <div className="col-span-2">
         <img
           alt="OH NO"
@@ -16,6 +16,9 @@ function BotCard({ bot }) {
         <p className="text-green-500 font-semibold">Health: {bot.health}</p>
         <p className="text-red-500 font-semibold">Damage: {bot.damage}</p>
         <p className="text-blue-500 font-semibold">Armor: {bot.armor}</p>
+        <button onClick={()=>addedArmy(bot)} className="bg-green-500 text-white rounded px-4 py-2">
+            Add To Army
+        </button>
       </div>
     </div>
   );
