@@ -37,7 +37,7 @@ import React from "react";
 
 function BotCard({ bot, enlistBot }) {
   return (
-    <div className="grid grid-cols-5 gap-4 p-4 bg-green-100 rounded shadow-md">
+    <div onClick={() => enlistBot(bot)} className="grid grid-cols-5 gap-4 p-4 bg-green-100 rounded shadow-md">
       <div className="col-span-2">
         <img
           alt="OH NO"
@@ -51,12 +51,12 @@ function BotCard({ bot, enlistBot }) {
         <div className="text-green-500 font-semibold">Health: {bot.health}</div>
         <div className="text-red-500 font-semibold">Damage: {bot.damage}</div>
         <div className="text-blue-500 font-semibold">Armor: {bot.armor}</div>
-        <button
+        {/* <button
           onClick={() => enlistBot(bot)}
           className="bg-green-500 text-white rounded px-4 py-2"
         >
           Add to army
-        </button>
+        </button> */}
       </div>
     </div>
   );
